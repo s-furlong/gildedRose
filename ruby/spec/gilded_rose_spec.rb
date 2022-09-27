@@ -82,10 +82,10 @@ describe GildedRose do
   end
 
   describe "Sulfuras" do
-    it "does not need to decrease quality for Sulfuras" do
+    it "remains at a quality level of 80" do
       items = [Item.new("Sulfuras, Hand of Ragnaros", 3, 30)]
       GildedRose.new(items).update_quality
-      expect(items[0].quality).to eq 30
+      expect(items[0].quality).to eq 80
     end
   end
 
